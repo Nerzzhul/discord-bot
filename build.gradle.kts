@@ -28,6 +28,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
     implementation("net.dv8tion:JDA:5.0.0-alpha.17")
     implementation("org.springframework.security:spring-security-core:5.7.2")
+    implementation("org.flywaydb:flyway-core:9.0.4")
 }
 
 subprojects {
