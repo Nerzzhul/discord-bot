@@ -4,8 +4,6 @@ buildscript {
     }
 }
 
-val springVersion = "2.7.1"
-
 plugins {
     val springBootVersion = "2.7.1"
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
