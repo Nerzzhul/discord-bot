@@ -27,6 +27,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
     implementation("net.dv8tion:JDA:5.0.0-alpha.17")
+    implementation("org.springframework.security:spring-security-core:5.7.2")
 }
 
 subprojects {
