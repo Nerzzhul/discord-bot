@@ -5,8 +5,7 @@ buildscript {
 }
 
 plugins {
-    val springBootVersion = "2.7.1"
-//    val jdaVersion = "5.0.0-alpha.17"
+    val springBootVersion = "2.7.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
     id("org.springframework.boot") version springBootVersion apply false
     java
@@ -19,16 +18,12 @@ allprojects {
 
     repositories {
         mavenCentral()
-            maven("https://m2.dv8tion.net/releases")
     }
 }
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-    implementation("net.dv8tion:JDA:5.0.0-alpha.17")
-    implementation("org.springframework.security:spring-security-core:5.7.2")
-    implementation("org.flywaydb:flyway-core:9.0.4")
 }
 
 subprojects {
