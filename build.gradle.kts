@@ -8,6 +8,7 @@ plugins {
     val springBootVersion = "2.7.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
     id("org.springframework.boot") version springBootVersion apply false
+    id("io.freefair.lombok") version "6.5.0.3" apply false
     java
 }
 
@@ -31,6 +32,7 @@ subprojects {
         plugin("io.spring.dependency-management")
         plugin("org.springframework.boot")
         plugin("java")
+        plugin("io.freefair.lombok")
     }
 }
 
