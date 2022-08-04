@@ -17,7 +17,7 @@ public class DiscordOAuth2User implements OAuth2User {
     }
 
     public String getUsername() {
-        return oAuth2User.getAttribute("username");
+        return oAuth2User.getAttribute("username") + "#" + oAuth2User.getAttribute("discriminator");
     }
 
     public String getAvatarUrl() {
