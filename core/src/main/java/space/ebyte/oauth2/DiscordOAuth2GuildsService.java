@@ -37,7 +37,7 @@ public class DiscordOAuth2GuildsService {
                 userInfoUrl + "/guilds",
                 HttpMethod.GET,
                 new HttpEntity<>(getHeaders(client)),
-                new ParameterizedTypeReference<List<DiscordOAuth2Guild>>() {
+                new ParameterizedTypeReference<>() {
                 });
     }
 
