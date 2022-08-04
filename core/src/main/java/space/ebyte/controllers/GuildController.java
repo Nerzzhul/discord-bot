@@ -18,7 +18,7 @@ public class GuildController {
 
     private final DiscordOAuth2GuildsService guildsService;
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<DiscordOAuth2Guild>> getGuilds(OAuth2AuthenticationToken authentication) {
         return guildsService.getGuilds(authentication);
     }
