@@ -20,13 +20,8 @@ import java.util.List;
 public class DiscordOAuth2GuildsService {
 
     private final RestOperations restOperations;
-    private final OAuth2AuthorizedClientService clientService;
 
-    public ResponseEntity<List<DiscordOAuth2Guild>> getGuilds(OAuth2AuthenticationToken authentication) {
-
-        var client = clientService.loadAuthorizedClient(
-                authentication.getAuthorizedClientRegistrationId(),
-                authentication.getName());
+    public ResponseEntity<List<DiscordOAuth2Guild>> getGuilds(OAuth2AuthorizedClient client) {
 
         var userInfoUrl = client.getClientRegistration()
                 .getProviderDetails()
