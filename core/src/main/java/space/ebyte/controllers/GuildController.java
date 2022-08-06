@@ -1,6 +1,7 @@
 package space.ebyte.controllers;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/guilds")
 @RequiredArgsConstructor
+@Slf4j
 public class GuildController {
 
     private final DiscordOAuth2GuildsService guildsService;
@@ -24,6 +26,7 @@ public class GuildController {
     @GetMapping
     public ResponseEntity<List<DiscordOAuth2Guild>> getGuilds(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient client,
                                                               @AuthenticationPrincipal DiscordOAuth2User user) {
+        log.info("Guilds request by user: {}", user);
         return guildsService.getGuilds(client);
     }
 }

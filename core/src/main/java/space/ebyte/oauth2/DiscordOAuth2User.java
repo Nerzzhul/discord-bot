@@ -42,4 +42,15 @@ public class DiscordOAuth2User implements OAuth2User {
     public String getName() {
         return oAuth2User.getName();
     }
+
+    @Override
+    public String toString() {
+
+        return "DiscordOAuth2User{" +
+                "id='" + getId() + '\'' +
+                ", username='" + getUsername() + '\'' +
+                ", avatarUrl='" + getAvatarUrl() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                '}';
+    }
 }
