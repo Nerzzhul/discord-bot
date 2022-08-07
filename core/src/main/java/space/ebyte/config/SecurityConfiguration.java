@@ -33,9 +33,12 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(authorize -> authorize
                         .anyRequest().authenticated()
                 )
-                .oauth2Login()
-                .userInfoEndpoint()
-                .userService(oAuth2UserService());
+                .oauth2Login(config -> {
+                    config.tokenEndpoint()
+                            .accessTokenResponseClient(accessTokenResponseClient());
+                    config.userInfoEndpoint()
+                            .userService(oAuth2UserService());
+                });
         return http.build();
     }
 
