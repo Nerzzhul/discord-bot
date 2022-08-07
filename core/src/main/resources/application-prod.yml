@@ -21,7 +21,7 @@ spring:
             user-name-attribute: username
 
 discord:
-  user-agent: Discord Bot (http://localhost:8080/)
+  user-agent: Discord Bot (https://github.com/Nerzzhul/discord-bot)
   bot:
     token: ${BOT_TOKEN}
 
