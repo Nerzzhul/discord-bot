@@ -10,12 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import space.ebyte.api.DiscordApi;
 import space.ebyte.models.DiscordGuild;
+import space.ebyte.models.DiscordOAuth2User;
 import space.ebyte.service.GuildMemberService;
 import space.ebyte.service.GuildsService;
-import space.ebyte.models.DiscordOAuth2User;
-import space.ebyte.utils.OAuth2TokenUtil;
 
 import java.util.List;
 
