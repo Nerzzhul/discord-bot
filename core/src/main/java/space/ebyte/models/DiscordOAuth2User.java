@@ -1,4 +1,4 @@
-package space.ebyte.oauth2;
+package space.ebyte.models;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,7 +21,10 @@ public class DiscordOAuth2User implements OAuth2User {
     }
 
     public String getAvatarUrl() {
-        return String.format("https://cdn.discordapp.com/avatars/%s/%s", getId(), oAuth2User.getAttribute("avatar"));
+        var avatar = oAuth2User.getAttribute("avatar");
+        if (avatar == null)
+            return null;
+        return String.format("https://cdn.discordapp.com/avatars/%s/%s", getId(), avatar);
     }
 
     public String getEmail() {

@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-    @Value("${discord.user-agent:Discord Bot (http://localhost:8080/)}")
+    @Value("${discord.api.user-agent:Discord Bot (http://localhost:8080/)}")
     private String userAgent;
 
     @Bean

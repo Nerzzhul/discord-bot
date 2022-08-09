@@ -17,7 +17,7 @@ import org.springframework.security.oauth2.core.http.converter.OAuth2AccessToken
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.client.RestTemplate;
-import space.ebyte.oauth2.DiscordOAuth2User;
+import space.ebyte.models.DiscordOAuth2User;
 
 import java.util.Arrays;
 

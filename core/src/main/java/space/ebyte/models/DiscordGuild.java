@@ -1,9 +1,9 @@
-package space.ebyte.oauth2;
+package space.ebyte.models;
 
 import lombok.Data;
 
 @Data
-public class DiscordOAuth2Guild {
+public class DiscordGuild {
     private String id;
     private String name;
 }

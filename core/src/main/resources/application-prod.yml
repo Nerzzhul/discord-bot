@@ -12,6 +12,7 @@ spring:
               - identify
               - guilds
               - email
+              - guilds.members.read
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
         provider:
           discord:
